@@ -181,25 +181,28 @@ createApp({
 		},
 
 		userSendMes(){
-			newMes = {
-				date : '00:00',
-				message : this.userMessage,
-				status : 'sent'
-			}
+			if (this.userMessage.length > 0){
 
-			this.contacts[this.contactSelected].messages.push(newMes);
-
-			this.userMessage = '';
-
-			setTimeout ( () => {
-				contactReply = {
+				newMes = {
 					date : '00:00',
-					message : 'Ok',
-					status : 'received'
-					
+					message : this.userMessage,
+					status : 'sent'
 				}
-				this.contacts[this.contactSelected].messages.push(contactReply);
-			} , 1000);
+				
+				this.contacts[this.contactSelected].messages.push(newMes);
+				
+				this.userMessage = '';
+				
+				setTimeout ( () => {
+					contactReply = {
+						date : '00:00',
+						message : 'Ok',
+						status : 'received'
+						
+					}
+					this.contacts[this.contactSelected].messages.push(contactReply);
+				} , 1000);
+			}
 
 		},
 
