@@ -151,13 +151,23 @@ section#contacts{
 div.contact{
     width: 100%;
     height: calc(100% / 6);
-    background-color: #eaeaea;
+    cursor: pointer;
+
 }
 
 div.contacts-profile p,
 div.message-info-txt p{
     font-size: .8rem;
     color: gray;
+}
+
+.contact-active{
+    background-color: #e9ebeb;
+    width: 100%;
+}
+
+.contact-inactive{
+    background-color: #ffffff;
 }
 
 /* --------- MAIN --------- */
