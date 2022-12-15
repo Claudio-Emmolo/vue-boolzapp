@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+body{
+    min-width: 1800px;
+}
 /* --------- BG --------- */
 div.wrap-container{
     height: 100vh;
@@ -49,10 +52,17 @@ div.container-box main{
 
 /* --------- HEADER --------- */
 
-section#user-info,
-section#message-info{
+div.top-header{
+    height: 25%;
+}
+
+div.bottom-header{
+    height: 75%;
+}
+
+section#user-info{
     width: 100%;
-    height: 8%;
+    height: 32%;
     background-color: #eaeaea;
 }
 
@@ -63,7 +73,8 @@ div.message-info-icon i{
 
 section#notify{
     background-color: #8edafc;
-    height: 10%;
+    height: 48%;
+    min-height: 108px;
 }
 
 div.notify-bell{
@@ -103,7 +114,7 @@ section#search input{
 
 /* CONTACT BOX */
 section#contacts{
-    height: 77%;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -126,5 +137,8 @@ main{
 }
 
 section#message-info{
+    width: 100%;
+    height: 8%;
+    background-color: #eaeaea;
     border-left: 2px solid rgb(211, 211, 211);
 }
