@@ -167,7 +167,8 @@ createApp({
     }
 			],
 			contactSelected : 0,
-			userMessage : ""
+			userMessage : "",
+			userSearch : ""
 
 
 		}
@@ -200,7 +201,21 @@ createApp({
 				this.contacts[this.contactSelected].messages.push(contactReply);
 			} , 1000);
 
-		}
+		},
+
+		userSearchFunction() {
+
+			this.contacts.forEach( (element, index) => {
+
+				if(  this.contacts[index].name.toLowerCase().includes(this.userSearch.toLowerCase())  ){
+					console.log(true);
+					console.log(element.name);
+					this.contacts.splice(index, element)
+				}
+			});
+			
+		},
+	
 	}
 
 }).mount ('#app')
