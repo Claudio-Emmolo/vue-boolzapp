@@ -1,8 +1,48 @@
+/* --------- GENERAL --------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --------- BG --------- */
+div.wrap-container{
+    height: 100vh;
+    width: 100%;
+    background-color: #dcdbd1;
 
-    
+    position: relative;
+}
+
+div.wrap-container div.top-bg{
+    background-color: #009688;
+    height: 20%;
+}
+
+/* --------- BOX --------- */
+
+div.container-box{
+    width: 80%;
+    height: 95%;
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.container-box header{
+    width: 35%;
+    height: 100%;
+    background-color: lime;
+}
+
+div.container-box main{
+    width: 65%;
+    height: 100%;
+    background-color: magenta;
+}
