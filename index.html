@@ -59,17 +59,21 @@
                 </section>
 
                 <!-- Section Contacts -->
-                <section id="contacts" class="d-flex justify-content-between px-3" v-for="(userContact, index) in contacts">
-                    <div class="contacts-profile h-100 d-flex align-items-center just">
-                        <img :src=" `./img/avatar${userContact.avatar}.jpg`" alt="" class="h-75 rounded-circle">
-                        <div class="contacts-text ms-2">
-                            <span class="fs-5"> {{userContact.name}} </span>
-                            <p class="m-0">Ultimo Accesso</p>
+                <section id="contacts">
+
+                    <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts">
+                        <div class="contacts-profile h-100 d-flex align-items-center just">
+                            <img :src=" `./img/avatar${userContact.avatar}.jpg`" alt="" class="h-75 rounded-circle">
+                            <div class="contacts-text ms-2">
+                                <span class="fs-5"> {{userContact.name}} </span>
+                                <p class="m-0">Ultimo messaggio inviato</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hours">
-                        <span>00:00</span>
-                    </div>
+                        <div class="hours">
+                            <span>12:00</span>
+                        </div>
+                    </id>
+
                 </section>
             </header>
 
