@@ -49,13 +49,15 @@ div.container-box main{
 
 /* --------- HEADER --------- */
 
-section#user-info{
+section#user-info,
+section#message-info{
     width: 100%;
     height: 8%;
     background-color: #eaeaea;
 }
 
-div.user-icon i{
+div.user-icon i,
+div.message-info-icon i{
     color: #b1b1b1;
 }
 
@@ -111,7 +113,18 @@ div.contact{
     background-color: #eaeaea;
 }
 
-div.contacts-profile p{
+div.contacts-profile p,
+div.message-info-txt p{
     font-size: .8rem;
     color: gray;
+}
+
+/* --------- MAIN --------- */
+
+main{
+    background-image: url(../img/mine.jpg);
+}
+
+section#message-info{
+    border-left: 2px solid rgb(211, 211, 211);
 }

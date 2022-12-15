@@ -63,7 +63,7 @@
 
                     <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts">
                         <div class="contacts-profile h-100 d-flex align-items-center just">
-                            <img :src=" `./img/avatar${userContact.avatar}.jpg`" alt="" class="h-75 rounded-circle">
+                            <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
                             <div class="contacts-text ms-2">
                                 <span class="fs-5"> {{userContact.name}} </span>
                                 <p class="m-0">Ultimo messaggio inviato</p>
@@ -78,7 +78,20 @@
             </header>
 
             <main>
-
+                <section id="message-info" class="d-flex align-items-center px-3">
+                    <div class="mex-info-img h-75">
+                        <img src="./img/avatar_1.jpg" alt="" class="h-100 rounded-circle">
+                    </div>
+                    <div class="message-info-txt ps-2">
+                        <span class="fs-4">User Name</span>
+                        <p class="m-0">Ultimo accesso oggi alle 12:00</p>
+                    </div>
+                    <div class="message-info-icon d-flex align-items-center fs-4 ms-auto">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip px-4"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
             </main>
         </div>
 
