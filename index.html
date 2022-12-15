@@ -58,11 +58,12 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </section>
 
-                <section id="contacts" class="d-flex justify-content-between px-3">
+                <!-- Section Contacts -->
+                <section id="contacts" class="d-flex justify-content-between px-3" v-for="(userContact, index) in contacts">
                     <div class="contacts-profile h-100 d-flex align-items-center just">
-                        <img src="./img/avatar_1.jpg" alt="" class="h-75 rounded-circle">
+                        <img :src="'./img/avatar'userContact.avatar'.jpg'" alt="" class="h-75 rounded-circle">
                         <div class="contacts-text ms-2">
-                            <span class="fs-5">Michele</span>
+                            <span class="fs-5"> {{userContact.name}} </span>
                             <p class="m-0">Ultimo Accesso</p>
                         </div>
                     </div>
