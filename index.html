@@ -65,9 +65,9 @@
                 <!-- Section Contacts -->
                 <section id="contacts">
 
-                        <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts" @click="contactClick(index)" :class="(index == contactSelected) ? 'contact-active' : 'contact-inactive' " >
+                        <div class="contact justify-content-between px-3" v-for="(userContact, index) in contacts" @click="contactClick(index)" :class="((index == contactSelected) ? 'contact-active' : 'contact-inactive' ), ((contacts[index].visible == false) ? 'd-none' : 'd-flex')" >
 
-                            <div class="contacts-profile h-100 align-items-center just" :class="(contacts[index].visible == false) ? 'd-none' : 'd-flex' ">
+                            <div class="contacts-profile h-100 d-flex align-items-center just">
                                 <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
                                 <div class="contacts-text ms-2">
                                     <span class="fs-5"> {{userContact.name}} </span>
