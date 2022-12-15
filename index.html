@@ -83,6 +83,8 @@
             </header>
 
             <main>
+
+                <!-- Message - Top Info (Ph, Name and Icon) -->
                 <section id="message-info" class="d-flex align-items-center px-3">
                     <div class="mex-info-img h-75">
                         <img :src=" `./img/avatar${contacts[contactSelected].avatar}.jpg` " alt="" class="h-100 rounded-circle">
@@ -98,11 +100,19 @@
                     </div>
                 </section>
 
+                <!-- Message - Center -->
                 <section id="message" class="d-flex flex-column">
                     <div class="message-box mess" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
                         <p class="m-0">{{text.message}}</p>
-                        <span class="mess-date">{{ contacts[0].messages[0].date }}</span>
+                        <span class="mess-date">{{ text.date }}</span>
                     </div>
+                </section>
+
+                <!-- Message - Bottom input -->
+                <section id="user-mess" class="d-flex align-items-center justify-content-between px-5">
+                    <i class="fa-regular fa-face-smile fs-3"></i>
+                    <input type="text" placeholder="Scrivi un messaggio" class="w-100 h-75 p-3 border-0 mx-5" v-model="userMessage" @keyup.enter="userSendMes()">
+                    <i class="fa-solid fa-microphone fs-3"></i>
                 </section>
             </main>
         </div>

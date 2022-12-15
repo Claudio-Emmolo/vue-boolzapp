@@ -175,13 +175,19 @@ section#message-info{
 
 section#message{
     width: 100%;
-    height: 92%;
-    border: 2px solid red;
+    height: 84%;
     padding: 5rem;
+    overflow-y: scroll;
 }
 
 div.message-box{
     width: 35%;
     position: relative;
     margin-bottom: 2rem;
+}
+
+section#user-mess{
+    width: 100%;
+    height: 8%;
+    background-color: #f3eeea;
 }
