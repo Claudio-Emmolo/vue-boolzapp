@@ -97,6 +97,13 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </section>
+
+                <section id="message" class="d-flex flex-column">
+                    <div class="message-box d-flex flex-column mess mess-green" v-for="(text,index) in contacts[0].messages">
+                        <p class="m-0">{{text.message}}</p>
+                        <span class="mess-date">{{ contacts[0].messages[0].date }}</span>
+                    </div>
+                </section>
             </main>
         </div>
 
