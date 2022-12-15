@@ -22,7 +22,7 @@ div.wrap-container div.top-bg{
 /* --------- BOX --------- */
 
 div.container-box{
-    width: 80%;
+    width: 85%;
     height: 95%;
     background-color: white;
 
@@ -45,4 +45,16 @@ div.container-box main{
     width: 65%;
     height: 100%;
     background-color: magenta;
+}
+
+/* --------- HEADER --------- */
+
+section#user-info{
+    width: 100%;
+    height: 10%;
+    background-color: #eaeaea;
+}
+
+div.user-icon i{
+    color: #b1b1b1;
 }
