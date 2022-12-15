@@ -77,3 +77,24 @@ div.notify-info a{
     color: gray;
     border-bottom: 1px solid gray;
 }
+
+section#search{
+    padding: .5rem;
+    background-color: #fafafa;
+}
+
+section#search button{
+    width: 20%;
+}
+
+section#search input{
+    width: 80%;
+}
+
+section#search button,
+section#search input{
+    background-color: white;
+    border: 1px solid rgb(226, 226, 226);
+    color: gray;
+    padding: .2rem .5rem;
+}
