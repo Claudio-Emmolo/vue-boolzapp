@@ -51,10 +51,29 @@ div.container-box main{
 
 section#user-info{
     width: 100%;
-    height: 10%;
+    height: 8%;
     background-color: #eaeaea;
 }
 
 div.user-icon i{
     color: #b1b1b1;
+}
+
+section#notify{
+    background-color: #8edafc;
+    height: 10%;
+}
+
+div.notify-bell{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: #8edafc;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+div.notify-info a{
+    color: gray;
+    border-bottom: 1px solid gray;
 }
