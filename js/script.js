@@ -209,8 +209,7 @@ createApp({
 
 				if(  this.contacts[index].name.toLowerCase().includes(this.userSearch.toLowerCase())  ){
 					console.log(true);
-					console.log(element.name);
-					this.contacts.splice(index, element)
+					this.contacts[index].visible = false;
 				}
 			});
 			
