@@ -65,8 +65,8 @@
                 <!-- Section Contacts -->
                 <section id="contacts">
 
-                    <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts">
-                        <div class="contacts-profile h-100 d-flex align-items-center just">
+                    <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts" @click="contactClick(index)">
+                        <div class="contacts-profile h-100 d-flex align-items-center just" >
                             <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
                             <div class="contacts-text ms-2">
                                 <span class="fs-5"> {{userContact.name}} </span>
@@ -85,10 +85,10 @@
             <main>
                 <section id="message-info" class="d-flex align-items-center px-3">
                     <div class="mex-info-img h-75">
-                        <img src="./img/avatar_1.jpg" alt="" class="h-100 rounded-circle">
+                        <img :src=" `./img/avatar${contacts[contactSelected].avatar}.jpg` " alt="" class="h-100 rounded-circle">
                     </div>
                     <div class="message-info-txt ps-2">
-                        <span class="fs-4">User Name</span>
+                        <span class="fs-4">{{ contacts[contactSelected].name }}</span>
                         <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                     </div>
                     <div class="message-info-icon d-flex align-items-center fs-4 ms-auto">
@@ -99,7 +99,7 @@
                 </section>
 
                 <section id="message" class="d-flex flex-column">
-                    <div class="message-box d-flex flex-column mess mess-green" v-for="(text,index) in contacts[0].messages">
+                    <div class="message-box mess" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
                         <p class="m-0">{{text.message}}</p>
                         <span class="mess-date">{{ contacts[0].messages[0].date }}</span>
                     </div>
