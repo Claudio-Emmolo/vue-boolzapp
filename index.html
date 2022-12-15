@@ -65,18 +65,20 @@
                 <!-- Section Contacts -->
                 <section id="contacts">
 
-                    <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts" @click="contactClick(index)" :class="(index == contactSelected) ? 'contact-active' : 'contact-inactive' ">
-                        <div class="contacts-profile h-100 d-flex align-items-center just" v-show="contacts[index].visible" >
-                            <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
-                            <div class="contacts-text ms-2">
-                                <span class="fs-5"> {{userContact.name}} </span>
-                                <p class="m-0">Ultimo messaggio inviato</p>
+                        <div class="contact d-flex justify-content-between px-3" v-for="(userContact, index) in contacts" @click="contactClick(index)" :class="(index == contactSelected) ? 'contact-active' : 'contact-inactive' " >
+
+                            <div class="contacts-profile h-100 align-items-center just" :class="(contacts[index].visible == false) ? 'd-none' : 'd-flex' ">
+                                <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
+                                <div class="contacts-text ms-2">
+                                    <span class="fs-5"> {{userContact.name}} </span>
+                                    <p class="m-0">Ultimo messaggio inviato</p>
+                                </div>
                             </div>
+                            <div class="hours" :class="(contacts[index].visible == false) ? 'd-none' : 'd-flex' ">
+                                <span>12:00</span>
+                            </div>
+
                         </div>
-                        <div class="hours">
-                            <span>12:00</span>
-                        </div>
-                    </id>
 
                 </section>
                 </div>
