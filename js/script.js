@@ -221,7 +221,7 @@ createApp({
 		},
 
         openDeleteWindow(){
-            deleteMexWindows = true;
+            this.deleteMexWindows = !this.deleteMexWindows;
         },
 
         deleteMessage(mexToRemove, mexIndex){
