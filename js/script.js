@@ -183,7 +183,7 @@ createApp({
 			if (this.userMessage.length > 0){
 
 				newMes = {
-					date : '00:00',
+					date : '00/00/0000 00:00:00',
 					message : this.userMessage,
 					status : 'sent'
 				}
@@ -194,7 +194,7 @@ createApp({
 				
 				setTimeout ( () => {
 					contactReply = {
-						date : '00:00',
+						date : '00/00/0000 00:00:00',
 						message : 'Ok',
 						status : 'received', 
 						
