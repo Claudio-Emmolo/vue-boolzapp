@@ -213,7 +213,6 @@ createApp({
 				this.contacts[index].visible = true;
 
 				if( !this.contacts[index].name.toLowerCase().includes(this.userSearch.toLowerCase())  ){
-					console.log(true);
 					this.contacts[index].visible = false;
 				}
 			});

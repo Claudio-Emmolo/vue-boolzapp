@@ -84,6 +84,7 @@ div.container-box main{
 
 div.top-header{
     height: 25%;
+    min-height: 232px;
 }
 
 div.bottom-header{
@@ -104,7 +105,6 @@ div.message-info-icon i{
 section#notify{
     background-color: #8edafc;
     height: 48%;
-    min-height: 108px;
 }
 
 div.notify-bell{
@@ -122,6 +122,7 @@ div.notify-info a{
 }
 
 section#search{
+    height: 20%;
     padding: .5rem;
     background-color: #fafafa;
 }
