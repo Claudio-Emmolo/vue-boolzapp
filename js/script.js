@@ -169,9 +169,7 @@ createApp({
 			contactSelected : 0,
 			userMessage : "",
 			userSearch : "",
-            deleteMexWindows : false 
-
-
+            deleteMexWindows : false ,
 		}
 	},
 
@@ -198,7 +196,7 @@ createApp({
 					contactReply = {
 						date : '00:00',
 						message : 'Ok',
-						status : 'received'
+						status : 'received', 
 						
 					}
 					this.contacts[this.contactSelected].messages.push(contactReply);

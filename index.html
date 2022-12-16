@@ -106,7 +106,7 @@
                 <section id="message" class="d-flex flex-column">
                     <div class="message-box mess position-relative" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
                         <p class="m-0">{{text.message}}</p>
-                        <span class="mess-date">{{ text.date }}</span>
+                        <span class="mess-date">{{ text.date.split(" ")[1].slice(0, -3) }}</span>
 
 
                         <!-- Delete Message -->
@@ -137,6 +137,7 @@
 
     <!-- Script JS -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.1/build/global/luxon.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
