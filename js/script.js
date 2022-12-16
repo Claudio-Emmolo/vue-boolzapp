@@ -224,13 +224,9 @@ createApp({
             this.deleteMexWindows = !this.deleteMexWindows;
         },
 
-        deleteMessage(mexToRemove, mexIndex){
-			const toRemoveCheck = this.contacts[this.contactSelected].messages[mexIndex].message.indexOf(mexToRemove);
-			if (toRemoveCheck > - 1 ){
-				this.contacts[this.contactSelected].messages.splice(mexToRemove, 1);
-			}
-
-            console.log(toRemoveCheck);
+        deleteMessage(mexIndex){
+            this.contacts[this.contactSelected].messages.splice(mexIndex, 1);
+            console.log(mexIndex);
 		},
 	
 	}
