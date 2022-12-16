@@ -168,7 +168,8 @@ createApp({
 			],
 			contactSelected : 0,
 			userMessage : "",
-			userSearch : ""
+			userSearch : "",
+            deleteMexWindows : false 
 
 
 		}
@@ -217,6 +218,19 @@ createApp({
 				}
 			});
 			
+		},
+
+        openDeleteWindow(){
+            deleteMexWindows = true;
+        },
+
+        deleteMessage(mexToRemove, mexIndex){
+			const toRemoveCheck = this.contacts[this.contactSelected].messages[mexIndex].message.indexOf(mexToRemove);
+			if (toRemoveCheck > - 1 ){
+				this.contacts[this.contactSelected].messages.splice(mexToRemove, 1);
+			}
+
+            console.log(toRemoveCheck);
 		},
 	
 	}

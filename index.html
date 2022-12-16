@@ -104,10 +104,22 @@
 
                 <!-- Message - Center -->
                 <section id="message" class="d-flex flex-column">
-                    <div class="message-box mess" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
+                    <div class="message-box mess position-relative" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
                         <p class="m-0">{{text.message}}</p>
                         <span class="mess-date">{{ text.date }}</span>
+
+
+                        <!-- Delete Message -->
+                        <div class="open-delete-window position-absolute top-0 end-0 pe-3 pt-2" @click="openDeleteWindow">
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                            <div class="delete-window position-absolute" :class="(deleteMexWindows) ? 'd-flex' : 'd-none' " @click="deleteMessage(text.message, index)">
+                                <span class="m-auto">Delete Message</span>
+                            </div>
+
+                        </div>
                     </div>
+
                 </section>
 
                 <!-- Message - Bottom input -->
