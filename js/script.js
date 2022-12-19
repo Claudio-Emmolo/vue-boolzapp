@@ -169,7 +169,7 @@ createApp({
 			contactSelected : 0,
 			userMessage : "",
 			userSearch : "",
-            deleteMexWindows : false ,
+            windowOpen : false,
             messageClicked  : -1
 		}
 	},
@@ -224,8 +224,14 @@ createApp({
 			
 		},
 
-        openDeleteWindow(indexCLicked){
-            this.messageClicked = indexCLicked
+        openDeleteWindow(indexClicked){
+            if(this.windowOpen == true){
+                this.messageClicked = -1;
+                this.windowOpen = false
+            } else {
+                this.messageClicked = indexClicked;
+                this.windowOpen = true
+            }
         },
 
         deleteMessage(mexIndex){
