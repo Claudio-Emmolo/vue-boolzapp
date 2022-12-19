@@ -170,6 +170,7 @@ createApp({
 			userMessage : "",
 			userSearch : "",
             deleteMexWindows : false ,
+            messageClicked  : -1
 		}
 	},
 
@@ -223,8 +224,8 @@ createApp({
 			
 		},
 
-        openDeleteWindow(){
-            this.deleteMexWindows = !this.deleteMexWindows;
+        openDeleteWindow(indexCLicked){
+            this.messageClicked = indexCLicked
         },
 
         deleteMessage(mexIndex){
