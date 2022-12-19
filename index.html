@@ -71,7 +71,7 @@
                                 <img :src=" `./img/avatar${userContact.avatar}.jpg`" :alt=" `${userContact.name} avatar` " class="h-75 rounded-circle">
                                 <div class="contacts-text ms-2">
                                     <span class="fs-5"> {{userContact.name}} </span>
-                                    <p class="m-0"> {{ userContact.messages.slice(-1)[0].message }} </p>
+                                    <p class="m-0"> {{  (userContact.messages.length > 0) ? (userContact.messages.slice(-1)[0].message) : "" }} </p>
                                 </div>
                             </div>
                             <div class="hours" :class="(contacts[index].visible == false) ? 'd-none' : 'd-flex' ">
