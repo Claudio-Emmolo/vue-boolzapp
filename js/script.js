@@ -180,10 +180,15 @@ createApp({
 		},
 
 		userSendMes(){
+
+            const DateTime = luxon.DateTime;
+            dt = DateTime.now();
+
+            console.log(dt)
 			if (this.userMessage.length > 0){
 
 				newMes = {
-					date : '00/00/0000 00:00:00',
+					date : dt.toLocaleString() + " " + dt.toLocaleString(DateTime.TIME_24_WITH_SECONDS),
 					message : this.userMessage,
 					status : 'sent'
 				}
@@ -194,7 +199,7 @@ createApp({
 				
 				setTimeout ( () => {
 					contactReply = {
-						date : '00/00/0000 00:00:00',
+						date : dt.toLocaleString() + " " + dt.toLocaleString(DateTime.TIME_24_WITH_SECONDS),
 						message : 'Ok',
 						status : 'received', 
 						

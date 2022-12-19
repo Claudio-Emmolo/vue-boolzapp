@@ -106,7 +106,7 @@
                 <section id="message" class="d-flex flex-column">
                     <div class="message-box mess position-relative" :class="(text.status == 'sent') ? 'mess-green' : 'mess-white' " v-for="(text,index) in contacts[contactSelected].messages">
                         <p class="m-0">{{text.message}}</p>
-                        <span class="mess-date">{{ text.date.split(" ")[1].slice(0, -3) }}</span>
+                        <span class="mess-date">{{ text.date.split(" ")[1].slice(0, -3)}}</span>
 
 
                         <!-- Delete Message -->
@@ -142,3 +142,4 @@
 </body>
 
 </html>
+
